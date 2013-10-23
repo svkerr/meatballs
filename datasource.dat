@@ -12,6 +12,7 @@ http://www2c.cdc.gov/podcasts/createrss.asp?c=146
 type:rss
 http://www.fsis.usda.gov/wps/wcm/connect/fsis-content/rss/recalls/ 
 ##
-##Restaurants score in NYC
+##Restaurants score in NY State (excluding NYC)Y
 http://healthdata.gov/data/dataset/food-service-establishment-inspections-beginning-2005-active
-
+## Restaurants in NYC
+https://nycopendata.socrata.com/download/4vkw-7nck/ZIP
