@@ -1,17 +1,42 @@
+###
 ## film_location_San Francisco
-https://data.sfgov.org/api/views/yitu-d5am/rows.json?accessType=DOWNLOAD
+start
+outfile::sf_movie
+src::https://data.sfgov.org/api/views/yitu-d5am/rows.json?accessType=DOWNLOAD
+time::never 
+stop
 ## Restaurant Chicago Data
-http://data.cityofchicago.org/resource/4ijn-s7e5.json
+start
+outfile::chicago_data 
+src::https://data.cityofchicago.org/api/views/4ijn-s7e5/rows.csv?accessType=DOWNLOAD
+time::30
+stop
 ## Restaurant_San_Francisco
-https://204.68.210.15/food/SFBusinesses.zip
-https://204.68.210.15/food/SFFoodProgram_Complete_Data.zip
+start
+outfile::SFBusiness.zip
+src::https://204.68.210.15/food/SFBusinesses.zip
+time::30
+end
+
+start
+outfile::SFFoodComplete.zip
+src::https://204.68.210.15/food/SFFoodProgram_Complete_Data.zip
+time::30
+stop
+###
 ## cdc rss feed
+record:start
 type:rss
 http://www2c.cdc.gov/podcasts/createrss.asp?c=146
-## 
+record:stop
+### 
+### fsis recall 
+record:start 
 type:rss
 http://www.fsis.usda.gov/wps/wcm/connect/fsis-content/rss/recalls/ 
+record:stop
 ##
+<<<<<<< HEAD
 ##Restaurants score in NY State (excluding NYC)Y
 http://healthdata.gov/data/dataset/food-service-establishment-inspections-beginning-2005-active
 <<<<<<< HEAD
@@ -19,4 +44,14 @@ this is a test by stu
 =======
 ## Restaurants in NYC
 https://nycopendata.socrata.com/download/4vkw-7nck/ZIP
+>>>>>>> upstream/master
+=======
+## nyc restaurants
+record:start
+outfile:nyc_data
+src:https://nycopendata.socrata.com/download/4vkw-7nck/ZIP
+time=30
+record:stop
+##
+
 >>>>>>> upstream/master
